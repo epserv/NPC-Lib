@@ -13,6 +13,7 @@ import com.github.juliarn.npc.modifier.AnimationModifier;
 import com.github.juliarn.npc.modifier.LabyModModifier;
 import com.github.juliarn.npc.modifier.MetadataModifier;
 import com.github.juliarn.npc.modifier.NPCModifier;
+import com.github.unldenis.hologram.Hologram;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.ImmutableList;
 import java.util.Collection;
@@ -45,7 +46,7 @@ public class NPCPool implements Listener {
 
   private static final Random RANDOM = new Random();
 
-  private final Plugin plugin;
+  protected final Plugin plugin;
 
   private final double spawnDistance;
   private final double actionDistance;

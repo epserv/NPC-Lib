@@ -54,6 +54,7 @@ public class TeleportModifier extends NPCModifier {
       container.getBooleans().write(0, onGround);
 
       super.npc.setLocation(location);
+      super.npc.hologram().teleport(location.clone().add(0, 0.5D, 0));
       return container;
     });
     return this;

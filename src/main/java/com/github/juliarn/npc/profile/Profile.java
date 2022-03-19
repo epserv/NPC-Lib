@@ -19,6 +19,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Optional;
+import java.util.Random;
 import java.util.Set;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
@@ -33,6 +34,8 @@ import org.jetbrains.annotations.Nullable;
  */
 public class Profile implements Cloneable {
 
+  private static final Random RANDOM = new Random();
+
   private static final ThreadLocal<Gson> GSON = ThreadLocal
       .withInitial(() -> new GsonBuilder().serializeNulls().create());
 
@@ -44,7 +47,7 @@ public class Profile implements Cloneable {
   private static final Type PROPERTY_LIST_TYPE = TypeToken
       .getParameterized(Set.class, Property.class).getType();
 
-  private String name;
+  private String name = new UUID(RANDOM.nextLong(), 0).toString().substring(0, 16);
   private UUID uniqueId;
   private Collection<Property> properties;
 
@@ -95,10 +98,9 @@ public class Profile implements Cloneable {
    */
   public Profile(UUID uniqueId, String name, Collection<Property> properties) {
     Preconditions
-        .checkArgument(name != null || uniqueId != null, "Either name or uniqueId must be given!");
+        .checkArgument(uniqueId != null, "Either name or uniqueId must be given!");
 
     this.uniqueId = uniqueId;
-    this.name = name;
     this.properties = properties;
   }
 
@@ -274,7 +276,10 @@ public class Profile implements Cloneable {
    *
    * @param name the new name of this profile.
    * @return the same profile instance, for chaining.
+   * @deprecated Holograms are used for the name from now on
    */
+  @Deprecated
+  @ApiStatus.ScheduledForRemoval
   @NotNull
   public Profile setName(String name) {
     this.name = name;
