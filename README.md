@@ -1,7 +1,7 @@
 # NPC-Lib
 
 Asynchronous, high-performance Minecraft NPC library for 1.8-1.18 servers.
-# This is a fork that integrates <a href="https://github.com/unldenis/Hologram-Lib">Hologram-Lib</a> for npc holograms.
+#### This is a fork that integrates <a href="https://github.com/unldenis/Hologram-Lib">Hologram-Lib</a> for npc holograms.
 
 ### Example usage
 
