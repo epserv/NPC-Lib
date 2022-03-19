@@ -21,9 +21,6 @@ public NPC appendNPC(Player player) {
             .build(this.npcPool);
 
     npc.hologram().getLines().get(2).setAnimation(Animation.CIRCLE);
-    Bukkit.getScheduler().runTaskTimer(plugin, ()->{
-        npc.teleport().queueTeleport(player.getLocation(), false).send();
-    }, 20L*4, 20L*4);
     return npc;
 }
 ```
