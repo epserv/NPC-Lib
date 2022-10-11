@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.github.juliarn</groupId>
+  <groupId>com.github.epserv</groupId>
   <artifactId>npc-lib</artifactId>
-  <version>2.7-SNAPSHOT</version>
+  <version>hologramlib-integration-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <properties>
