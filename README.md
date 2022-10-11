@@ -7,16 +7,22 @@ Asynchronous, high-performance Minecraft NPC library for 1.8-1.18 servers.
 Add the repository and dependency to your plugin:
 Maven
 ```xml
-<repository>
-    <id>jitpack.io</id>
-    <url>https://jitpack.io</url>
-</repository>
-
-<dependency>
-    <groupId>com.github.unldenis</groupId>
-    <artifactId>NPC-Lib</artifactId>
-    <version>hologramlib-integration-SNAPSHOT</version>
-</dependency>
+<project>
+  <repositories>
+    <repository>
+      <id>jitpack.io</id>
+      <url>https://jitpack.io</url>
+    </repository>
+  </repositories>
+  
+  <dependencies>
+    <dependency>
+      <groupId>com.github.epserv</groupId>
+      <artifactId>NPC-Lib</artifactId>
+      <version>hologramlib-integration-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
+</project>
 ```
   
 ### Example usage

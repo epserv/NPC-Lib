@@ -13,7 +13,6 @@ import com.github.juliarn.npc.modifier.TeleportModifier;
 import com.github.juliarn.npc.modifier.VisibilityModifier;
 import com.github.juliarn.npc.profile.Profile;
 import com.github.juliarn.npc.profile.ProfileUtils;
-import com.github.unldenis.hologram.Hologram;
 import com.github.unldenis.hologram.placeholder.Placeholders;
 import com.google.common.base.Preconditions;
 import java.util.Collection;

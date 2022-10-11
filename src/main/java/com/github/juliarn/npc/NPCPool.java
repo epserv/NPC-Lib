@@ -13,7 +13,6 @@ import com.github.juliarn.npc.modifier.AnimationModifier;
 import com.github.juliarn.npc.modifier.LabyModModifier;
 import com.github.juliarn.npc.modifier.MetadataModifier;
 import com.github.juliarn.npc.modifier.NPCModifier;
-import com.github.unldenis.hologram.Hologram;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.ImmutableList;
 import java.util.Collection;
