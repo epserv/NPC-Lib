@@ -2,7 +2,6 @@ package com.github.juliarn.npc;
 
 import com.github.unldenis.hologram.Hologram;
 import com.github.unldenis.hologram.placeholder.Placeholders;
-import java.util.Collection;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
@@ -18,9 +17,8 @@ public class NPCHologram extends Hologram {
   @SuppressWarnings({"UnstableApiUsage", "deprecation"})
   @ApiStatus.Internal
   public NPCHologram(@NotNull Plugin plugin, @NotNull Location location,
-      @Nullable Placeholders placeholders, @NotNull Collection<Player> seeingPlayers,
-      @NotNull Object... l) {
-    super(plugin, location, placeholders, seeingPlayers, l);
+      @Nullable Placeholders placeholders, @NotNull Object... l) {
+    super(plugin, location, placeholders, l);
   }
 
   @Override

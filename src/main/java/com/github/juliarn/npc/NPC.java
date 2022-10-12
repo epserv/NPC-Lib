@@ -21,6 +21,7 @@ import java.util.UUID;
 import java.util.concurrent.ConcurrentLinkedDeque;
 import java.util.concurrent.CopyOnWriteArraySet;
 import java.util.function.Function;
+import net.kyori.adventure.text.Component;
 import org.apache.commons.lang.Validate;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
@@ -107,7 +108,7 @@ public class NPC {
     this.gameProfile = ProfileUtils.profileToWrapper(this.profile);
 
     // create hologram
-    this.hologram = new NPCHologram(plugin, location.clone().add(0, 0.5D, 0), placeholders, this.seeingPlayers, lines);
+    this.hologram = new NPCHologram(plugin, location.clone().add(0, 0.5D, 0), placeholders, lines);
   }
 
   /**
@@ -281,7 +282,7 @@ public class NPC {
   /**
    * Creates a new animation modifier which serves methods to play animations on an NPC
    *
-   * @return a animation modifier modifying this NPC
+   * @return an animation modifier modifying this NPC
    */
   @NotNull
   public AnimationModifier animation() {
@@ -299,7 +300,7 @@ public class NPC {
   }
 
   /**
-   * Creates a new equipemt modifier which serves methods to change an NPCs equipment
+   * Creates a new equipment modifier which serves methods to change an NPCs equipment
    *
    * @return an equipment modifier modifying this NPC
    */
@@ -579,6 +580,12 @@ public class NPC {
     public Builder addLine(@NotNull ItemStack item) {
       Validate.notNull(item, "Item cannot be null");
       this.lines.addFirst(item);
+      return this;
+    }
+
+    public Builder addLine(@NotNull Component component) {
+      Validate.notNull(component, "Component cannot be null");
+      this.lines.addFirst(component);
       return this;
     }
 
