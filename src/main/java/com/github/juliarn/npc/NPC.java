@@ -79,7 +79,7 @@ public class NPC {
       boolean imitatePlayer,
       boolean usePlayerProfiles,
       @NotNull Placeholders placeholders,
-      @NotNull Object[]... lines
+      @NotNull Object[][] lines
   ) {
     this.entityId = entityId;
 
@@ -631,7 +631,7 @@ public class NPC {
           this.imitatePlayer,
           this.usePlayerProfiles,
           this.placeholders,
-          this.lines.toArray());
+          this.lines.toArray(new Object[0][0]));
       pool.takeCareOf(npc);
 
       return npc;
