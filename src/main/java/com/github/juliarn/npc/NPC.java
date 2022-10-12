@@ -61,12 +61,12 @@ public class NPC {
   /**
    * Creates a new npc instance.
    *
-   * @param profile           The profile of the npc.
-   * @param spawnCustomizer   The spawn customizer of the npc.
-   * @param location          The location of the npc.
-   * @param entityId          The entity id of the npc.
-   * @param lookAtPlayer      If the npc should always look in the direction of the player.
-   * @param imitatePlayer     If the npc should imitate the player.
+   * @param profile The profile of the npc.
+   * @param spawnCustomizer The spawn customizer of the npc.
+   * @param location The location of the npc.
+   * @param entityId The entity id of the npc.
+   * @param lookAtPlayer If the npc should always look in the direction of the player.
+   * @param imitatePlayer If the npc should imitate the player.
    * @param usePlayerProfiles If the npc should use the profile of the player being spawned to.
    */
   private NPC(
