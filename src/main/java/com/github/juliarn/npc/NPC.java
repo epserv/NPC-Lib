@@ -79,7 +79,7 @@ public class NPC {
       boolean imitatePlayer,
       boolean usePlayerProfiles,
       @NotNull Placeholders placeholders,
-      @NotNull Object... lines
+      @NotNull Object[]... lines
   ) {
     this.entityId = entityId;
 
@@ -471,7 +471,7 @@ public class NPC {
     };
 
     // hologram stuff
-    private final ConcurrentLinkedDeque<Object> lines = new ConcurrentLinkedDeque<>();
+    private final ConcurrentLinkedDeque<Object[]> lines = new ConcurrentLinkedDeque<>();
     private final Placeholders placeholders = new Placeholders();
 
     /**
@@ -572,20 +572,32 @@ public class NPC {
     }
 
     public Builder addLine(@NotNull String line) {
+      return addLine(line, false);
+    }
+
+    public Builder addLine(@NotNull String line, boolean clickable) {
       Validate.notNull(line, "Line cannot be null");
-      this.lines.addFirst(line);
+      this.lines.addFirst(new Object[] { line, clickable });
       return this;
     }
 
     public Builder addLine(@NotNull ItemStack item) {
+      return addLine(item, false);
+    }
+
+    public Builder addLine(@NotNull ItemStack item, boolean clickable) {
       Validate.notNull(item, "Item cannot be null");
-      this.lines.addFirst(item);
+      this.lines.addFirst(new Object[] { item, clickable });
       return this;
     }
 
     public Builder addLine(@NotNull Component component) {
+      return addLine(component, false);
+    }
+
+    public Builder addLine(@NotNull Component component, boolean clickable) {
       Validate.notNull(component, "Component cannot be null");
-      this.lines.addFirst(component);
+      this.lines.addFirst(new Object[] { component, clickable });
       return this;
     }
 

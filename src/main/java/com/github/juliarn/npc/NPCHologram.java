@@ -17,7 +17,7 @@ public class NPCHologram extends Hologram {
   @SuppressWarnings({"UnstableApiUsage", "deprecation"})
   @ApiStatus.Internal
   public NPCHologram(@NotNull Plugin plugin, @NotNull Location location,
-      @Nullable Placeholders placeholders, @NotNull Object... l) {
+      @Nullable Placeholders placeholders, @NotNull Object[]... l) {
     super(plugin, location, placeholders, l);
   }
 
