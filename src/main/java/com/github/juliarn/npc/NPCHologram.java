@@ -30,4 +30,8 @@ public class NPCHologram extends Hologram {
   protected void hide(@NotNull Player player) {
     super.hide(player);
   }
+
+  public void updateLines(@NotNull Player player) {
+    this.lines.forEach(abstractLine -> abstractLine.update(player));
+  }
 }
